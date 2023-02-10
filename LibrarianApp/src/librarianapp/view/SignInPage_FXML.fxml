@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="467.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarianapp.view.SignInPageController">
+      <VBox fx:id="vbox_1" alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="800.0" spacing="20.0">
+          <Label fx:id="mainHeader" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="98.0" text="WELCOME TO THE LIBRARY" VBox.vgrow="ALWAYS">
+              <VBox.margin>
+                  <Insets />
+              </VBox.margin>
+          </Label>
+          <VBox fx:id="vbox_2" alignment="CENTER" prefHeight="257.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+              <Label fx:id="subHeader" text="Enter Your Login Details">
+                  <font>
+                      <Font size="20.0" />
+                  </font>
+                  <VBox.margin>
+                      <Insets bottom="20.0" />
+                  </VBox.margin>
+              </Label>
+              <HBox fx:id="hbox_1" alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="NEVER">
+                  <Label fx:id="usernameLabel" text="Username">
+                      <font>
+                          <Font size="17.0" />
+                      </font>
+                  </Label>
+                  <TextField fx:id="usernameField" maxWidth="-Infinity" onKeyPressed="#keyPressedSignIn" prefHeight="25.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                      <font>
+                          <Font size="13.0" />
+                      </font>
+                  </TextField>
+              </HBox>
+              <HBox fx:id="hbox_2" alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="15.0" VBox.vgrow="NEVER">
+                  <VBox.margin>
+                      <Insets bottom="20.0" />
+                  </VBox.margin>
+                  <Label fx:id="passwordLabel" text="Password">
+                      <font>
+                          <Font size="17.0" />
+                      </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" onKeyPressed="#keyPressedSignIn" prefHeight="25.0" prefWidth="200.0">
+                      <font>
+                          <Font size="13.0" />
+                      </font>
+                  </PasswordField>
+              </HBox>
+              <Button fx:id="signInBtn" mnemonicParsing="false" onAction="#buttonPressedSignIn" prefHeight="38.0" prefWidth="92.0" text="SIGN IN" />
+          </VBox>
+      </VBox>
+</AnchorPane>

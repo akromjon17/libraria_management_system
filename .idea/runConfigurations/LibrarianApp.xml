@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LibrarianApp" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="librarianapp.Main" />
+    <module name="LibrarianApp" />
+    <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LibrarianApp" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

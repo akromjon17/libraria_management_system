@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: maroon;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.HomeViewController">
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <Label fx:id="header" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" text="WELCOME" textFill="WHITE">
+                <font>
+                    <Font name="Algerian" size="40.0" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="100.0" />
+                </VBox.margin>
+            </Label>
+            <GridPane fx:id="gridPane" alignment="CENTER" hgap="5.0" prefHeight="200.0" prefWidth="300.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <Button fx:id="membersBtn" maxHeight="120.0" maxWidth="320.0" mnemonicParsing="false" onAction="#loadMembersView" style="-fx-background-color: F9D8A7; -fx-border-radius: 50;" text="Members" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font name="Algerian" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="librariansBtn" layoutX="34.0" layoutY="12.0" maxHeight="120.0" maxWidth="320.0" mnemonicParsing="false" onAction="#loadLibrariansView" style="-fx-background-color: F9D8A7;" text="Librarians" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font name="Algerian" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="booksBtn" layoutX="134.0" layoutY="12.0" maxHeight="120.0" maxWidth="320.0" mnemonicParsing="false" onAction="#loadBooksPage" style="-fx-background-color: F9D8A7; -fx-border-radius: 50;" text="Books" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="Algerian" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="editProfileBtn" layoutX="34.0" layoutY="43.0" maxHeight="120.0" maxWidth="320.0" mnemonicParsing="false" onAction="#editProfile" style="-fx-background-color: F9D8A7;" text="Your Profile" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="Algerian" size="20.0" />
+                    </font>
+                </Button>
+                <VBox.margin>
+                    <Insets bottom="120.0" />
+                </VBox.margin>
+            </GridPane>
+            <Button fx:id="signOutBtn" mnemonicParsing="false" onAction="#signOut" prefHeight="50.0" prefWidth="150.0" style="-fx-border-radius: 5;" text="Sign Out">
+                <VBox.margin>
+                    <Insets bottom="50.0" />
+                </VBox.margin>
+            <font>
+               <Font name="Algerian" size="16.0" />
+            </font>
+            </Button>
+        </children>
+    </VBox>
+</AnchorPane>

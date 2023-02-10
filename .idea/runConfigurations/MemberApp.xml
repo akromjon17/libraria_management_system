@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MemberApp" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="memberapp.Main" />
+    <module name="MemberApp" />
+    <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MemberApp" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="memberapp.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,150 @@
+#center_anchor_pane
+{
+    -fx-background-image: url("/memberapp/resources/images/Background0.jpg") ;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-color: maroon;
+}
+
+#sign_out_btn_style
+{
+    -fx-background-color: #F6C4C3 ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 14px ;
+    -fx-text-fill: black ;
+}
+
+#sub_header_style
+{
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 25px ;
+    -fx-text-fill: white ;
+}
+
+#instruction_style
+{
+    -fx-text-fill: white ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 15px ;
+}
+
+.tree-view .tree-cell				/* to change the style of the TreeView and its Items */
+{
+	-fx-background-color: #233142 ;
+	-fx-font-family : "Algerian" ;
+	-fx-font-size : 18px ;
+	-fx-text-fill : white ;
+}
+
+.tree-view .tree-cell: focused
+{
+	-fx-background-color: maroon ;
+}
+
+.table-view
+{
+    -fx-background-color: #F9D8A7 ;
+    -fx-border-color: black ;
+    -fx-border-radius: 10;
+    -fx-font-family : "Comic Sans MS" ;
+}
+
+.table-view .column-header-background .filler
+{
+	-fx-background-color: transparent ;
+}
+
+.table-view .column-header-background
+{
+    -fx-font-family: "Algerian" ;
+    -fx-font-size : 14px ;
+    -fx-text-background-color: white ;
+    -fx-background-color: #F9D8A7 ;
+}
+
+.table-view .column-header
+{
+    -fx-background-color: transparent ;
+    -fx-text-background-color : black;
+    -fx-border-color: black ;
+}
+
+.table-view .table-cell
+{
+	-fx-border-color: black ;
+}
+
+.table-row-cell
+{
+	-fx-background-color : #F9D8A7 ;
+	-fx-text-background-color : black;
+	-fx-font-size : 13px ;
+}
+
+.table-row-cell:empty
+{
+	-fx-background-color: #F9D8A7 ;
+}
+
+.table-row-cell:empty .table-cell
+{
+	-fx-border-width: 0px ;
+}
+
+.table-row-cell : hover
+{
+	-fx-background-color: white ;
+	-fx-text-background-color: black ;
+}
+
+#header_style
+{
+    -fx-text-fill: white ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 25px ;
+}
+
+.choice-box
+{
+    -fx-background-color: #233142 ;
+    -fx-mark-color: white;             /* arrow color */
+}
+
+.choice-box .label                      /* the label in the Choice Box */
+{
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 13px ;
+    -fx-text-fill: white ;
+}
+
+.choice-box .context-menu               /* Background color of the whole context menu */
+{
+    -fx-background-color: #233142;
+}
+
+.choice-box .menu-item:focused
+{
+    -fx-background-color: red;       /* Focused item background color in the list */
+}
+
+.choice-box .menu-item > .label
+{
+    -fx-text-fill: white;               /* Text color of non-focused items in the list */
+}
+
+.text-field
+{
+    -fx-background-color: #233142 ;
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-font-size: 13px ;
+    -fx-text-fill: white ;
+}
+
+.button
+{
+    -fx-border-width: 1px;
+    -fx-background-color: #F6C4C3 ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 14px ;
+    -fx-text-fill: black;
+}

@@ -1,0 +1,47 @@
+.text-field
+{
+   -fx-background-color: #233142 ;
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-font-size: 13px ;
+    -fx-text-fill: white ;
+}
+
+#root_style
+{
+    -fx-background-color: maroon ;
+}
+.label
+{
+    -fx-text-fill: white ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 15px ;
+}
+.date-picker
+{
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-font-size: 14px ;
+    -fx-text-fill: white ;
+}
+#signInButton_style
+{
+    -fx-background-color: #F6C4C3 ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 13px ;
+    -fx-text-fill: white ;
+}
+
+
+#warning_style
+{
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-text-fill: red ;
+    -fx-font-size: 15px ;
+}
+.button
+{
+    -fx-border-width: 1px;
+    -fx-background-color: #F6C4C3 ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 14px ;
+    -fx-text-fill: black;
+}

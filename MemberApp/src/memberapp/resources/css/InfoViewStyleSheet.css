@@ -1,0 +1,41 @@
+.button
+{
+    -fx-background-color: #F6C4C3 ;
+    -fx-font-family: "Helvetica" ;
+    -fx-font-size: 14px ;
+    -fx-text-fill: black ;
+}
+
+.text-field
+{
+    -fx-background-color: #233142 ;
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-text-fill: white ;
+    -fx-font-size: 13px ;
+}
+
+.label
+{
+    -fx-font-family: "Algerian" ;
+    -fx-text-fill: white ;
+    -fx-font-size: 14px ;
+}
+
+#title_label_style
+{
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 23px ;
+    -fx-font-weight: bold ;
+}
+
+#author_label_style
+{
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 20px ;
+}
+
+#warning_style
+{
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-font-size: 15px ;
+}

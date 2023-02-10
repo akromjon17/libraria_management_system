@@ -1,0 +1,30 @@
+.label
+{
+    -fx-text-fill: white ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 18px ;
+}
+
+.button
+{
+    -fx-background-radius: 3px ;
+    -fx-background-color: #233142 ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 14px ;
+    -fx-text-fill: white ;
+}
+
+.text-field
+{
+    -fx-background-color: #233142;
+    -fx-text-fill: white ;
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-font-size: 14px ;
+}
+
+#header_style
+{
+    -fx-font-family: "Algerian" ;
+    -fx-background-color: #233142;
+    -fx-font-size: 25px;
+}

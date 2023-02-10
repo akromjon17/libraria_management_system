@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="750.0" style="-fx-background-color: F9D8A7;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.SignInPageController">
+    <VBox fx:id="mainVbox" alignment="TOP_CENTER" layoutX="250.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <Label fx:id="mainHeader" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="98.0" prefWidth="700.0" style="-fx-background-color: maroon;" text="Welcome To Library Management System :)" textFill="#dadada" VBox.vgrow="ALWAYS">
+             <VBox.margin>
+                 <Insets />
+             </VBox.margin>
+             <font>
+                 <Font name="Algerian" size="22.0" />
+             </font>
+         </Label>
+          <VBox fx:id="vbox_2" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="359.0" prefWidth="750.0" spacing="20.0" style="-fx-background-color: maroon;">
+              <HBox fx:id="hbox_1" alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="NEVER">
+                  <Label fx:id="usernameLabel" text="Username" textFill="WHITE">
+                      <font>
+                          <Font name="Algerian" size="15.0" />
+                      </font>
+                  </Label>
+                  <TextField fx:id="usernameField" maxWidth="-Infinity" onKeyPressed="#keyPressedSignIn" opacity="0.9" prefHeight="35.0" prefWidth="208.0" promptText="Username" HBox.hgrow="ALWAYS" />
+              </HBox>
+              <HBox fx:id="hbox_2" alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="15.0" VBox.vgrow="NEVER">
+                  <VBox.margin>
+                      <Insets bottom="20.0" />
+                  </VBox.margin>
+                  <Label fx:id="passwordLabel" text="Password" textFill="WHITE">
+                      <font>
+                          <Font name="Algerian" size="15.0" />
+                      </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" onKeyPressed="#keyPressedSignIn" opacity="0.9" prefHeight="35.0" prefWidth="208.0" promptText="Password" />
+              </HBox>
+              <Button fx:id="signInBtn" mnemonicParsing="false" onAction="#buttonPressedSignIn" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #233142;" text="Sign In" textFill="WHITE">
+                  <font>
+                      <Font name="Algerian" size="15.0" />
+                  </font>
+         </Button>
+          </VBox>
+    </VBox>
+</AnchorPane>
