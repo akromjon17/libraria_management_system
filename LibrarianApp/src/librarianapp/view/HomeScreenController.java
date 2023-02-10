@@ -248,7 +248,7 @@ public class HomeScreenController extends Main implements Initializable
         editProfileBtn.setOnAction(e ->
         {
             try {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("tableProfile_FXML.fxml"))) ;
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EditProfile_FXML.fxml"))) ;
 
                 rootAnchorPane.getChildren().clear() ;
                 rootAnchorPane.getChildren().addAll(root, menuBtn) ;
