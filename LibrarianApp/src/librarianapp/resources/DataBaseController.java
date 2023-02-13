@@ -167,12 +167,16 @@ public class DataBaseController
 
     public Boolean updateBook(String prevID, Book book)
     {
-        String query = "UPDATE tbl_books SET BookID = \"" + book.getBookID() + "\"" + ", Title = \"" + book.getTitle() + "\", Author = \"" + book.getAuthor() + "\", ISBN = \"" + book.getIsbn() + "\", Publisher = \"" + book.getPublisher() + "\", Category = \"" + book.getPublisher() + "\", TotalCopies = " + book.getTotalCopies() + ", CopiesAvailable = " + book.getCopiesAvailable() + " WHERE BookID = \"" + book.getBookID() + "\" WHERE BookID = '" + prevID + "' ;" ;
+        System.out.println(prevID);
+        System.out.println(book.getBookID());
+        String query = "UPDATE tbl_books SET BookID = \"" + book.getBookID() + "\"" + ", Title = \"" + book.getTitle() + "\", Author = \"" + book.getAuthor() + "\", ISBN = \"" + book.getIsbn() + "\", Publisher = \"" + book.getPublisher() + "\", Category = \"" + book.getCategory() + "\", TotalCopies = " + book.getTotalCopies() + ", CopiesAvailable = " + book.getCopiesAvailable() + "  WHERE BookID =  \"" + prevID + "\" ;" ;
 
         try
         {
+
+
             statement = connection.createStatement() ;
-            return statement.execute(query) ;
+            return !statement.execute(query) ;
         }
         catch (Exception e) {
             System.out.println("\nExceptions in DataBaseController.updateBook() -> \n" + e) ;

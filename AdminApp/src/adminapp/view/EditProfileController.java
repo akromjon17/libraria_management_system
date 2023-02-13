@@ -143,7 +143,6 @@ public class EditProfileController implements Initializable
 
     public void saveChanges()
     {
-        String encryptedPswrd = prevPassword ;
 
         if(!passwordField.getText().equals(prevPassword))
         {
@@ -156,7 +155,7 @@ public class EditProfileController implements Initializable
 
 
         // create a temporary account using the details in the text fields and some details in the user's account
-        Account tempAcc = new Account(Main.userAccount.getAcctType(), Main.userAccount.getId(), firstNameField.getText(), lastNameField.getText(), usernameField.getText(), encryptedPswrd, Main.userAccount.getDateCreated()) ;
+        Account tempAcc = new Account(Main.userAccount.getAcctType(), Main.userAccount.getId(), firstNameField.getText(), lastNameField.getText(), usernameField.getText(), prevPassword, Main.userAccount.getDateCreated()) ;
         tempAcc.setNumOfBooksBorrowed(Main.userAccount.getNumOfBooksBorrowed()) ;
         tempAcc.setDateOfBirth(Main.userAccount.getDateOfBirth()) ;
         tempAcc.setEmail(emailField.getText()) ;

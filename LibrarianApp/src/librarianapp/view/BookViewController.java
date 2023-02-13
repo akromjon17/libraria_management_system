@@ -94,12 +94,18 @@ public class BookViewController implements Initializable
         if(editing && confirmationBox.show("Save changes made?", "SAVE CHANGES", "Yes", "No"))
         {
             // check if the entered book id has no duplicate in the database
-            if(this.bookIDField.getText().equals(prevBookID) && dataBaseController.checkBookID(bookIDField.getText()))
+
+            if(!this.bookIDField.getText().equals(prevBookID) && dataBaseController.checkBookID(bookIDField.getText()))
             {
                 messageBox.show("Entered book ID already exists, please enter another book ID.", "ERROR") ;
             }
             else
             {
+                Book book = new Book(bookIDField.getText(),titleField.getText() , authorField.getText(), isbnField.getText(), publisherField.getText(), categoryField.getText(), totalCopiesField.getText(),copiesAvailableField.getText()) ;
+
+
+                if(dataBaseController.updateBook( prevBookID,book)) messageBox.show("The book was successfully updated.", "SUCCESS") ;
+                else messageBox.show("Failed to update the book. Try again later. ", "ERROR") ;
                 // make the text fields uneditable
                 this.bookIDField.setEditable(false) ;
                 this.titleField.setEditable(false) ;
@@ -109,6 +115,8 @@ public class BookViewController implements Initializable
                 this.categoryField.setEditable(false) ;
                 this.totalCopiesField.setEditable(false) ;
                 this.copiesAvailableField.setEditable(false) ;
+
+
 
                 editBtn.setText("EDIT") ;
                 editing = false ;
@@ -123,7 +131,7 @@ public class BookViewController implements Initializable
             this.isbnField.setEditable(true) ;
             this.publisherField.setEditable(true) ;
             this.categoryField.setEditable(true) ;
-            this.totalCopiesField.setEditable(false) ;
+            this.totalCopiesField.setEditable(true) ;
             this.copiesAvailableField.setEditable(true) ;
 
             editBtn.setText("SAVE") ;
