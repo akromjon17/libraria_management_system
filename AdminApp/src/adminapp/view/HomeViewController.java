@@ -20,7 +20,7 @@ import adminapp.Main ;
 public class HomeViewController extends Main implements Initializable
 {
     public AnchorPane root ;
-    public Label header ;
+    public Label main_header_style ;
     public GridPane gridPane ;
     public Button membersBtn, librariansBtn, booksBtn, editProfileBtn, signOutBtn ;
 
@@ -28,15 +28,15 @@ public class HomeViewController extends Main implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        header.setText("WELCOME, " + Main.userAccount.getFirstName().toUpperCase()) ;
+        main_header_style.setText("WELCOME, " + Main.userAccount.getFirstName().toUpperCase()) ;
 
-        root.setId("root_style") ;
-        header.setId("main_header_style") ;
-        membersBtn.setId("option_btn_style") ;
-        librariansBtn.setId("option_btn_style") ;
-        booksBtn.setId("option_btn_style") ;
-        editProfileBtn.setId("option_btn_style") ;
-        signOutBtn.setId("back_btn_style");
+//        root.setId("root_style") ;
+//        main_header_style.setId("main_header_style") ;
+//        membersBtn.setId("option_btn_style") ;
+//        librariansBtn.setId("option_btn_style") ;
+//        booksBtn.setId("option_btn_style") ;
+//        editProfileBtn.setId("option_btn_style") ;
+//        signOutBtn.setId("back_btn_style");
     }
 
 
@@ -118,6 +118,7 @@ public class HomeViewController extends Main implements Initializable
             scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
 
             Stage window = (Stage) this.editProfileBtn.getScene().getWindow() ;
+            window.setResizable(true);
             window.setScene(scene) ;
         }
         catch (Exception e)
@@ -140,7 +141,7 @@ public class HomeViewController extends Main implements Initializable
 
             Stage stage = new Stage() ;
             stage.setTitle("LOGIN TO YOUR ACCOUNT") ;
-            stage.setResizable(true) ;
+            stage.setResizable(false) ;
             stage.setScene(scene) ;
             stage.show() ;
         }

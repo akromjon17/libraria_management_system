@@ -6,14 +6,14 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.EditProfileController">
+<AnchorPane fx:id="root" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.EditProfileController">
     <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <children>
             <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="520.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
             <VBox fx:id="vbox" alignment="CENTER" prefWidth="700.0" spacing="10.0">
                 <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
                     <children>
-                        <Label fx:id="header" alignment="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="150.0" text="PROFILE">
+                        <Label fx:id="header" alignment="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="698.0" text="PROFILE">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -24,33 +24,33 @@
                     </VBox.margin>
                 </HBox>
                 <HBox fx:id="hbox1" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" spacing="10.0">
-                    <Label fx:id="firstNameLbl" minWidth="-Infinity" prefWidth="150.0" text="First name" textFill="WHITE" />
+                    <Label fx:id="firstNameLbl" minWidth="-Infinity" prefWidth="150.0" text="First name" />
                     <TextField fx:id="firstNameField" maxHeight="30.0" maxWidth="300.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" HBox.hgrow="NEVER" />
                 </HBox>
                 <HBox fx:id="hbox2" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" spacing="10.0">
-                    <Label fx:id="lastNameLbl" minWidth="-Infinity" prefWidth="150.0" text="Last name" textFill="WHITE" />
+                    <Label fx:id="lastNameLbl" minWidth="-Infinity" prefWidth="150.0" text="Last name" />
                     <TextField fx:id="lastNameField" maxHeight="30.0" maxWidth="300.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" />
                 </HBox>
                 <HBox fx:id="hbox3" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" spacing="10.0">
-                    <Label fx:id="usernameLbl" minWidth="-Infinity" prefWidth="150.0" text="Username" textFill="WHITE" />
+                    <Label fx:id="usernameLbl" minWidth="-Infinity" prefWidth="150.0" text="Username" />
                     <TextField fx:id="usernameField" maxHeight="30.0" maxWidth="300.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" />
                 </HBox>
                 <HBox fx:id="hbox5" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" spacing="10.0">
-                    <Label fx:id="emailLbl" minWidth="-Infinity" prefWidth="150.0" text="Email Address" textFill="WHITE" />
+                    <Label fx:id="emailLbl" minWidth="-Infinity" prefWidth="150.0" text="Email Address" />
                     <TextField fx:id="emailField" maxHeight="30.0" maxWidth="300.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" />
                 </HBox>
                 <HBox fx:id="hbox6" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" spacing="10.0">
-                    <Label fx:id="phoneLbl" minWidth="-Infinity" prefWidth="150.0" text="Phone" textFill="WHITE" />
+                    <Label fx:id="phoneLbl" minWidth="-Infinity" prefWidth="150.0" text="Phone" />
                     <TextField fx:id="phoneField" maxHeight="30.0" maxWidth="300.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" />
                 </HBox>
                 <HBox fx:id="hbox7" alignment="CENTER" layoutX="10.0" layoutY="352.0" prefHeight="40.0" prefWidth="350.0" spacing="10.0">
                     <children>
-                        <Label fx:id="nicLbl" minWidth="-Infinity" prefWidth="150.0" text="NIC Number" textFill="WHITE" />
+                        <Label fx:id="nicLbl" minWidth="-Infinity" prefWidth="150.0" text="NIC Number" />
                         <TextField fx:id="nicField" maxHeight="30.0" maxWidth="300.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" />
                     </children>
                 </HBox>
                 <HBox fx:id="hbox8" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" spacing="10.0">
-                    <Label fx:id="addressLbl" minWidth="-Infinity" prefWidth="150.0" text="Residential Address" textFill="WHITE" />
+                    <Label fx:id="addressLbl" minWidth="-Infinity" prefWidth="150.0" text="Residential Address" />
                     <TextField fx:id="addressField" maxHeight="30.0" maxWidth="300.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" />
                 </HBox>
                   <Button fx:id="changePswrdBtn" mnemonicParsing="false" onAction="#changePassword" prefHeight="30.0" prefWidth="200.0" text="Change Password" />

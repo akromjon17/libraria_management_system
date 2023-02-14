@@ -5,7 +5,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.BooksPageController">
-    <Label fx:id="header" alignment="CENTER" layoutX="50.0" layoutY="40.0" maxWidth="1.7976931348623157E308" prefHeight="75.0" text="BOOKS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+    <Label fx:id="header" alignment="CENTER" layoutX="50.0" layoutY="1.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="900.0" text="BOOKS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
         <font>
             <Font size="25.0" />
         </font>
@@ -29,6 +29,6 @@
         </columnResizePolicy>
     </TableView>
     <VBox alignment="CENTER" fillWidth="false" layoutX="400.0" layoutY="512.0" prefHeight="100.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-        <Button fx:id="getReportBtn" mnemonicParsing="false" onAction="#generateReportAsPDF" prefHeight="30.0" prefWidth="120.0" text="Get Report" />
+        <Button fx:id="addBook" mnemonicParsing="false" onAction="#addNewBook" prefHeight="30.0" prefWidth="120.0" text="Add Book" />
     </VBox>
 </AnchorPane>

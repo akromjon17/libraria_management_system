@@ -5,6 +5,7 @@ import javafx.fxml.Initializable ;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.* ;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.* ;
 import javafx.stage.Modality;
@@ -91,6 +92,7 @@ public class EditProfileController implements Initializable
             scene.getStylesheets().add("/memberapp/resources/css/InfoViewStyleSheet.css") ;
 
             Stage window = new Stage() ;
+            window.getIcons().add(new Image("/memberapp/resources/images/books.png"));
             window.setTitle("Change Your Password");
             window.setScene(scene) ;
             window.setResizable(false) ;

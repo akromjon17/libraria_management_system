@@ -42,7 +42,7 @@
     -fx-font-size: 12px ;
     -fx-text-fill: black ;
 }
-
+/*===============================================================================*/
 .table-view
 {
     -fx-background-color: #F9D8A7 ;
@@ -53,15 +53,15 @@
 
 .table-view .column-header-background .filler
 {
-	-fx-background-color: transparent ;
+    -fx-background-color: transparent ;
 }
 
 .table-view .column-header-background
 {
     -fx-font-family: "Algerian" ;
     -fx-font-size : 14px ;
-    -fx-text-background-color: white ;
-    -fx-background-color: #F9D8A7 ;
+    -fx-background-color: black ;
+    -fx-text-fill : black;
 }
 
 .table-view .column-header
@@ -69,35 +69,37 @@
     -fx-background-color: transparent ;
     -fx-text-background-color : black;
     -fx-border-color: black ;
+    -fx-text-fill : black;
 }
 
 .table-view .table-cell
 {
-	-fx-border-color: black ;
+    -fx-border-color: black ;
 }
 
 .table-row-cell
 {
-	-fx-background-color : #F9D8A7 ;
-	-fx-text-background-color : black;
-	-fx-font-size : 13px ;
+    -fx-background-color : #F9D8A7 ;
+    -fx-text-background-color : black;
+    -fx-font-size : 13px ;
 }
 
 .table-row-cell:empty
 {
-	-fx-background-color: #F9D8A7 ;
+    -fx-background-color: #F9D8A7 ;
 }
 
 .table-row-cell:empty .table-cell
 {
-	-fx-border-width: 0px ;
+    -fx-border-width: 0px ;
 }
 
-.table-row-cell : hover
+.table-row-cell :hover
 {
-	-fx-background-color: white ;
-	-fx-text-background-color: black ;
+    -fx-background-color: white ;
+    -fx-text-background-color: black ;
 }
+/*===============================================================================*/
 
 .choice-box
 {
@@ -126,7 +128,27 @@
 {
     -fx-text-fill: white;               /* Text color of non-focused items in the list */
 }
+/*===============================================================================*/
+.date-picker
+{
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-font-size: 14px ;
+    -fx-text-fill: black ;
+}
+#signInButton_style
+{
+    -fx-background-color: #F6C4C3 ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 13px ;
+    -fx-text-fill: white ;
+}
 
+#warning_style
+{
+    -fx-font-family: "Comic Sans MS" ;
+    -fx-text-fill: red ;
+    -fx-font-size: 15px ;
+}
 .text-field
 {
     -fx-background-color: #233142 ;
@@ -141,4 +163,10 @@
     -fx-font-family: "Algerian" ;
     -fx-font-size: 14px ;
     -fx-text-fill: black;
+}
+.label
+{
+    -fx-text-fill: white ;
+    -fx-font-family: "Algerian" ;
+    -fx-font-size: 15px ;
 }

@@ -38,16 +38,6 @@ public class AddMemberAcctController implements Initializable
         {
             this.dataBaseController = new DataBaseController();
             dobPicker.setEditable(false);
-
-            header.setId("header_style");
-            vbox.setId("root_style");
-            firstNameLbl.setId("instruction_style");
-            lastNameLbl.setId("instruction_style");
-            usernameLbl.setId("instruction_style");
-            dobLbl.setId("instruction_style");
-            phoneLbl.setId("instruction_style");
-            emailLbl.setId("instruction_style");
-            addressLbl.setId("instruction_style");
         }
         catch (Exception e)
         {

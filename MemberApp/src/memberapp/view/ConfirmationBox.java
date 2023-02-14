@@ -1,5 +1,6 @@
 package memberapp.view;
 
+import javafx.scene.image.Image;
 import javafx.stage.* ;
 import javafx.scene.* ;
 import javafx.scene.layout.* ;
@@ -17,7 +18,7 @@ public class ConfirmationBox
 
         primaryStage = new Stage() ;
         primaryStage.setTitle(title) ;
-
+        primaryStage.getIcons().add(new Image("/memberapp/resources/images/books.png"));
         Label lbl = new Label() ;
         lbl.setText(message) ;
         lbl.setMaxWidth(Double.MAX_VALUE) ;

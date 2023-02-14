@@ -94,7 +94,7 @@ public class MemberAccountsController extends  Main implements Initializable
                     Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/adminapp/view/MemberAccountView_FXML.fxml"))) ;
 
                     Scene scene = new Scene(root) ;
-                    scene.getStylesheets().add("/adminapp/resources/css/InfoViewStyleSheet.css") ;
+                    scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
                     stage.setOnCloseRequest(windowEvent ->
                     {
                         this.tableView.setItems(dataBaseController.getAllMemberAccounts()) ;
@@ -135,6 +135,7 @@ public class MemberAccountsController extends  Main implements Initializable
             scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
 
             Stage window = (Stage) this.backBtn.getScene().getWindow() ;
+
             window.setScene(scene) ;
         }
         catch (Exception e)
@@ -178,7 +179,7 @@ public class MemberAccountsController extends  Main implements Initializable
             Parent root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/adminapp/view/AddMemberAcct_FXML.fxml"))) ;
 
             Scene scene = new Scene(root) ;
-            scene.getStylesheets().add("/adminapp/resources/css/InfoViewStyleSheet.css") ;
+            scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
 
             Stage stage = new Stage() ;
             stage.setOnCloseRequest(windowEvent ->

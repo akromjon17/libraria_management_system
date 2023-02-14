@@ -92,7 +92,7 @@ public class LibrarianAccountsController implements Initializable
                     Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/adminapp/view/LibrarianAccountView_FXML.fxml"))) ;
 
                     Scene scene = new Scene(root) ;
-                    scene.getStylesheets().add("/adminapp/resources/css/InfoViewStyleSheet.css") ;
+                    scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
                     stage.setOnCloseRequest(windowEvent ->
                     {
                         this.tableView.setItems(dataBaseController.getAllLibrarianAccounts()) ;
@@ -176,7 +176,7 @@ public class LibrarianAccountsController implements Initializable
             Parent root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/adminapp/view/AddLibrarianAcct_FXML.fxml"))) ;
 
             Scene scene = new Scene(root) ;
-            scene.getStylesheets().add("/adminapp/resources/css/InfoViewStyleSheet.css") ;
+            scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
 
             Stage stage = new Stage() ;
             stage.setOnCloseRequest(windowEvent ->

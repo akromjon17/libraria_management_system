@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -94,7 +95,9 @@ public class BooksPageController implements Initializable
                     scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
 
                     Stage stage = new Stage() ;
-                    stage.setTitle("Book Info") ;
+                    stage.getIcons().add(new Image("/adminapp/resources/images/books.png"));
+                    stage.setScene(scene) ;
+                    stage.setTitle("BOOK INFO") ;
                     stage.setOnCloseRequest(windowEvent ->
                     {
 
@@ -166,8 +169,29 @@ public class BooksPageController implements Initializable
     }
 
 
-    public void generateReportAsPDF()
+    public void addNewBook()
     {
-        messageBox.show(" This feature is not available right now. ", "Error") ;
+        try
+        {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/adminapp/view/AddNewBook.fxml"))) ;
+
+            Scene scene = new Scene(root) ;
+            scene.getStylesheets().add("/adminapp/resources/css/HomePageStyleSheet.css") ;
+
+            Stage stage = new Stage() ;
+            stage.setOnCloseRequest(windowEvent ->
+            {
+                this.tableView.setItems(dataBaseController.getAllBooks()) ;
+            }) ;
+            stage.setResizable(false) ;
+            stage.initModality(Modality.APPLICATION_MODAL) ;
+            stage.setScene(scene) ;
+            stage.showAndWait();
+        }
+        catch (Exception e)
+        {
+            System.out.println("\nExceptions in HomeScreenController.addNewBook() -> \n") ;
+            e.printStackTrace() ;
+        }
     }
 }

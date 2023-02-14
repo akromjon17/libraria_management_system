@@ -1,6 +1,7 @@
 package adminapp.view;
 
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -13,9 +14,11 @@ import java.util.ResourceBundle;
 
 import adminapp.resources.DataBaseController;
 import adminapp.model.Account;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class AddLibrarianAcctController implements Initializable
 {
@@ -41,6 +44,7 @@ public class AddLibrarianAcctController implements Initializable
             dobPicker.setEditable(false);
             root.setId("root_style");
             header.setId("header_style");
+
         }
         catch (Exception e)
         {

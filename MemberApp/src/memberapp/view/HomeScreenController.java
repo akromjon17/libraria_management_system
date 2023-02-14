@@ -6,6 +6,7 @@ import javafx.fxml.Initializable ;
 import javafx.scene.* ;
 import javafx.scene.control.* ;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.* ;
@@ -232,6 +233,7 @@ public class HomeScreenController implements Initializable
                     scene.getStylesheets().add("/memberapp/resources/css/InfoViewStyleSheet.css") ;
 
                     primary_stage.setScene(scene);
+                    primary_stage.getIcons().add(new Image("/memberapp/resources/images/books.png"));
                     primary_stage.show();
                 }
             }
@@ -283,6 +285,7 @@ public class HomeScreenController implements Initializable
         Stage stage = new Stage() ;
         stage.setTitle("M E M B E R   A P P L I C A T I O N  -  S I G N  I N") ;
         stage.setResizable(false) ;
+        stage.getIcons().add(new Image("/memberapp/resources/images/books.png"));
         stage.setScene(scene) ;
 
         window.close() ;

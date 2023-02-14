@@ -5,10 +5,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: maroon;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.HomeViewController">
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: maroon;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.HomeViewController">
     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <children>
-            <Label fx:id="header" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" text="WELCOME" textFill="WHITE">
+            <Label fx:id="main_header_style" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="82.0" prefWidth="900.0" text="WELCOME" textFill="WHITE">
                 <font>
                     <Font name="Algerian" size="40.0" />
                 </font>

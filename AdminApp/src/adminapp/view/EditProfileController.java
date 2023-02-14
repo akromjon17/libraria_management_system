@@ -124,11 +124,11 @@ public class EditProfileController implements Initializable
             Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/adminapp/view/ChangePassword_FXML.fxml"))) ;
 
             Scene scene = new Scene(newRoot) ;
-            scene.getStylesheets().add("/adminapp/resources/css/InfoViewStyleSheet.css") ;
+            scene.getStylesheets().add("/adminapp/resources/css/homePageStyleSheet.css") ;
 
             Stage window = new Stage() ;
             window.getIcons().add(new Image("/adminapp/resources/images/books.png"));
-            window.setTitle("Change Password");
+            window.setTitle("CHANGE PASSWORD");
             window.setResizable(false) ;
             window.setScene(scene) ;
             window.initModality(Modality.APPLICATION_MODAL) ;
@@ -144,14 +144,7 @@ public class EditProfileController implements Initializable
     public void saveChanges()
     {
 
-        if(!passwordField.getText().equals(prevPassword))
-        {
 
-
-
-            System.out.println("\nPassword = " + passwordField.getText() + "\n") ;
-
-        }
 
 
         // create a temporary account using the details in the text fields and some details in the user's account

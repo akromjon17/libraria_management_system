@@ -4,6 +4,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -76,14 +77,7 @@ public class ChangePasswordController implements Initializable
     }
 
 
-    /**
-     * This method first checks if all the fields are filled. Then, it will encrypt the text in 'currentPswrdField' using
-     * the salt stored in 'Main.userAccount' and compare the result with the password stored in 'Main.userAccount'.
-     * If the passwords are equal, then it'll verify the 2 new passwords.
-     * After verification, the details for this account to be updated is called using the 'updateAccount' method in
-     * the DataBaseController.
-     * The operation is then checked if it's successful or not and a message is displayed.
-     */
+
     public void changePassword()
     {
         String oldPassword, newPassword ;
@@ -114,6 +108,7 @@ public class ChangePasswordController implements Initializable
                         messageBox.show("Password changed!", "SUCCESS") ;
 
                         Stage stage = (Stage) changeBtn.getScene().getWindow() ;
+
                         stage.close() ;
                     }
                     else
