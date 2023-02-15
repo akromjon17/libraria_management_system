@@ -3,51 +3,141 @@ package adminapp.view;
 import adminapp.model.Book;
 import adminapp.resources.DataBaseController;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
+
+
 public class BookViewController implements Initializable
 {
-    public AnchorPane root ;
-    public Label bookIDLbl, titleLbl, authorLbl, isbnLbl, publisherLbl, categoryLbl, copiesAvailableLbl, totalCopiesLbl ;
-    public TextField bookIDField, isbnField, publisherField, categoryField, copiesAvailableField, totalCopiesField ;
-    public VBox vbox ;
+    public Pane root ;
+    public Label header, bookIDLbl, titleLbl, authorLbl, isbnLbl, publisherLbl, categoryLbl, totalCopiesLbl, copiesAvailableLbl ;
+    public TextField bookIDField, titleField, authorField, isbnField, publisherField, categoryField, totalCopiesField, copiesAvailableField ;
+    public Button editBtn ;
 
-DataBaseController dataBaseController=new DataBaseController();
-MessageBox messageBox=new MessageBox();
+    private DataBaseController dataBaseController ;
 
-    public BookViewController() throws Exception { }
+    private final MessageBox messageBox = new MessageBox() ;
+    private final ConfirmationBox confirmationBox = new ConfirmationBox() ;
+
+    private Boolean editing ;
+    public String prevBookID, prevTitle, prevAuthor, prevIsbn, prevPublisher, prevCategory, prevTotalCopies, prevCopiesAvailable ;
+
+
+
+    public BookViewController() { }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        try
+        {
+            this.dataBaseController = new DataBaseController() ;
 
-        titleLbl.setText(BooksPageController.selectedBook.getTitle()) ;
-        authorLbl.setText("By " + BooksPageController.selectedBook.getAuthor()) ;
+            Book theBook = BooksPageController.selectedBook;
 
-        bookIDField.setText(BooksPageController.selectedBook.getBookID()) ;
-        isbnField.setText(BooksPageController.selectedBook.getIsbn()) ;
-        publisherField.setText(BooksPageController.selectedBook.getPublisher()) ;
-        categoryField.setText(BooksPageController.selectedBook.getCategory()) ;
-        copiesAvailableField.setText(BooksPageController.selectedBook.getCopiesAvailable()) ;
-        totalCopiesField.setText(BooksPageController.selectedBook.getTotalCopies()) ;
+            this.prevBookID = theBook.getBookID() ;
+            this.prevTitle = theBook.getTitle() ;
+            this.prevAuthor = theBook.getAuthor() ;
+            this.prevIsbn = theBook.getIsbn() ;
+            this.prevPublisher = theBook.getPublisher() ;
+            this.prevCategory = theBook.getCategory() ;
+            this.prevTotalCopies = theBook.getTotalCopies() ;
+            this.prevCopiesAvailable = theBook.getCopiesAvailable() ;
 
-        root.setId("root_style") ;
-        titleLbl.setId("main_header_style") ;
-        authorLbl.setId("header_style") ;
-        bookIDLbl.setId("instruction_style") ;
-        isbnLbl.setId("instruction_style") ;
-        publisherLbl.setId("instruction_style") ;
-        copiesAvailableLbl.setId("instruction_style") ;
-        totalCopiesLbl.setId("instruction_style") ;
-        categoryLbl.setId("instruction_style") ;
+            editing = false ;
+
+            initializeTextFields() ;
+
+            header.setId("header_style") ;
+            root.setStyle("-fx-background-color: maroon");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace() ;
+        }
+    }
+
+
+    private void initializeTextFields()
+    {
+        // initialize the text fields with the data held in the Book object
+        this.bookIDField.setText(this.prevBookID) ;
+        this.titleField.setText(this.prevTitle) ;
+        this.authorField.setText(this.prevAuthor) ;
+        this.isbnField.setText(this.prevIsbn) ;
+        this.publisherField.setText(this.prevPublisher) ;
+        this.categoryField.setText(this.prevCategory) ;
+        this.totalCopiesField.setText(this.prevTotalCopies);
+        this.copiesAvailableField.setText(this.prevCopiesAvailable) ;
+
+        // make the field uneditable
+        this.bookIDField.setEditable(false) ;
+        this.titleField.setEditable(false) ;
+        this.authorField.setEditable(false) ;
+        this.isbnField.setEditable(false) ;
+        this.publisherField.setEditable(false) ;
+        this.categoryField.setEditable(false) ;
+        this.totalCopiesField.setEditable(false) ;
+        this.copiesAvailableField.setEditable(false) ;
+    }
+
+
+    public void editOrSave()
+    {
+        if(editing && confirmationBox.show("Save changes made?", "SAVE CHANGES", "Yes", "No"))
+        {
+            // check if the entered book id has no duplicate in the database
+
+            if(!this.bookIDField.getText().equals(prevBookID) && dataBaseController.checkBookID(bookIDField.getText()))
+            {
+                messageBox.show("Entered book ID already exists, please enter another book ID.", "ERROR") ;
+            }
+            else
+            {
+                Book book = new Book(bookIDField.getText(),titleField.getText() , authorField.getText(), isbnField.getText(), publisherField.getText(), categoryField.getText(), totalCopiesField.getText(),copiesAvailableField.getText()) ;
+
+
+                if(dataBaseController.updateBook( prevBookID,book)) messageBox.show("The book was successfully updated.", "SUCCESS") ;
+                else messageBox.show("Failed to update the book. Try again later. ", "ERROR") ;
+                // make the text fields uneditable
+                this.bookIDField.setEditable(false) ;
+                this.titleField.setEditable(false) ;
+                this.authorField.setEditable(false) ;
+                this.isbnField.setEditable(false) ;
+                this.publisherField.setEditable(false) ;
+                this.categoryField.setEditable(false) ;
+                this.totalCopiesField.setEditable(false) ;
+                this.copiesAvailableField.setEditable(false) ;
+
+
+
+                editBtn.setText("EDIT") ;
+                editing = false ;
+            }
+        }
+        else
+        {
+            // make the text fields editable
+            this.bookIDField.setEditable(true) ;
+            this.titleField.setEditable(true) ;
+            this.authorField.setEditable(true) ;
+            this.isbnField.setEditable(true) ;
+            this.publisherField.setEditable(true) ;
+            this.categoryField.setEditable(true) ;
+            this.totalCopiesField.setEditable(true) ;
+            this.copiesAvailableField.setEditable(true) ;
+
+            editBtn.setText("SAVE") ;
+            editing = true ;
+        }
     }
     public void delete(){
         Book book = BooksPageController.selectedBook;

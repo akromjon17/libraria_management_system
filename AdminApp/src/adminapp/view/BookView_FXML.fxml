@@ -1,89 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" minHeight="500.0" minWidth="650.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.BookViewController">
-    <Label fx:id="titleLbl" alignment="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" text="&lt;title goes here&gt;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminapp.view.BookViewController">
+    <Label fx:id="header" alignment="CENTER" layoutX="224.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="BOOK INFO">
         <font>
-            <Font size="25.0" />
-        </font>
-        <padding>
-            <Insets left="10.0" right="10.0" />
-        </padding>
-    </Label>
-    <Label fx:id="authorLbl" alignment="CENTER" layoutY="68.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="650.0" text="&lt;author's name goes here&gt;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
-        <font>
-            <Font size="20.0" />
+            <Font size="22.0" />
         </font>
     </Label>
-    <VBox fx:id="vbox" alignment="CENTER" layoutX="250.0" layoutY="134.0" prefHeight="316.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
-        <HBox fx:id="hbox1" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                <Label fx:id="bookIDLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Book ID">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="bookIDField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="150.0" />
-            </children>
-        </HBox>
-        <HBox fx:id="hbox2" alignment="CENTER" layoutX="10.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                <Label fx:id="isbnLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" text="ISBN">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="isbnField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="200.0" />
-            </children>
-        </HBox>
-        <HBox fx:id="hbox3" alignment="CENTER" layoutX="10.0" layoutY="280.0" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                <Label fx:id="categoryLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" text="Category">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="categoryField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="200.0" />
-            </children>
-        </HBox>
-        <HBox fx:id="hbox4" alignment="CENTER" layoutX="10.0" layoutY="310.0" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                <Label fx:id="publisherLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" text="Publisher">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="publisherField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="200.0" />
-            </children>
-        </HBox>
-        <HBox fx:id="hbox5" alignment="CENTER" layoutX="10.0" layoutY="325.0" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                <Label fx:id="copiesAvailableLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Copies Available">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="copiesAvailableField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="150.0" />
-            </children>
-        </HBox>
-        <HBox fx:id="hbox6" alignment="CENTER" layoutX="10.0" layoutY="245.0" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                <Label fx:id="totalCopiesLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Total No. Of Copies">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="totalCopiesField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="150.0" />
-            </children>
-        </HBox>
-      <Button mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="100.0" text="DELETE">
-         <VBox.margin>
-            <Insets top="20.0" />
-         </VBox.margin>
-      </Button>
-    </VBox>
-</AnchorPane>
+    <Label fx:id="bookIDLbl" layoutX="140.0" layoutY="88.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="70.0" text="Book ID">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="bookIDField" layoutX="230.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="240.0" />
+    <Label fx:id="titleLbl" layoutX="140.0" layoutY="118.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="70.0" text="Title">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="titleField" layoutX="230.0" layoutY="116.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="240.0" />
+    <Label fx:id="authorLbl" layoutX="140.0" layoutY="148.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="70.0" text="Author">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="authorField" layoutX="230.0" layoutY="146.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="240.0" />
+    <Label fx:id="categoryLbl" layoutX="140.0" layoutY="178.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="70.0" text="Category">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="categoryField" layoutX="230.0" layoutY="176.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="240.0" />
+    <Label fx:id="isbnLbl" layoutX="140.0" layoutY="208.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="70.0" text="ISBN">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="isbnField" layoutX="230.0" layoutY="206.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="240.0" />
+    <Label fx:id="publisherLbl" layoutX="140.0" layoutY="238.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="70.0" text="Publisher">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="publisherField" layoutX="230.0" layoutY="235.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="240.0" />
+    <Label fx:id="totalCopiesLbl" layoutX="140.0" layoutY="268.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="130.0" text="Total No. Of Copies">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="totalCopiesField" layoutX="330.0" layoutY="266.0" prefHeight="25.0" prefWidth="140.0" />
+    <Label fx:id="copiesAvailableLbl" layoutX="140.0" layoutY="298.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="130.0" text="Copies Available">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <TextField fx:id="copiesAvailableField" layoutX="330.0" layoutY="296.0" prefHeight="25.0" prefWidth="140.0" />
+    <Button fx:id="editBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editOrSave" prefHeight="30.0" prefWidth="260.0" text="EDIT" />
+    <Button alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="384.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="260.0" text="Delete" />
+</Pane>
